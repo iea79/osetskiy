@@ -2204,6 +2204,17 @@ input[type=checkbox]:disabled:indeterminate:before {
 	}
 }
 
+@media (max-width: 1280px) and (min-width: 1024px) {
+	.first_screen {
+		&_kit {
+			top: 250px;
+		}
+		.second_line_top {
+			// vertical-align: top;
+		}
+	}
+}
+
 // max-width: 1024px ===========================================================
 @media (max-width: 1024px) and (min-width: 760px) {
 	.contact {
