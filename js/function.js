@@ -116,11 +116,11 @@ $(document).ready(function() {
             if (currentScrollTop >= firstHei + aboutHei) {            
                 if (head.hasClass('stiky') == true ) {
                     head.removeClass('stiky');
-                    console.log('Sroll up');
+                    //console.log('Sroll up');
                 }
             }
         } else {
-            console.log('Scroll down');
+            //console.log('Scroll down');
         }
 
     }
@@ -139,13 +139,13 @@ $(document).ready(function() {
             setTimeout(function() {
                 $('.header_wave').removeClass('close');
             }, 1400);
-            // console.log('desktop hide menu')
+            // //console.log('desktop hide menu')
         } else {
             $('.header_wave').addClass('close');
             $('.logo_big').removeClass('hide')
             $('.navbar').removeClass('open');
             $('.header_wave').removeClass('close');
-            // console.log('mobile hide menu')
+            // //console.log('mobile hide menu')
         }
     }
 
@@ -318,8 +318,8 @@ $(document).ready(function() {
             // },
             afterResize: function(){
                 var pluginContainer = $(this);
-                console.log(pluginContainer)
-                // console.log($(window).width());
+                //console.log(pluginContainer)
+                // //console.log($(window).width());
             },
             // afterResponsive: function(isResponsive){
             // },
@@ -478,7 +478,7 @@ $(document).ready(function() {
             tel = $('[name=CPHONE]').val();
             text = $('[name=CTEXT]').val();
             fields = ['?CNAME='+name+ '&CEMAIL=' +email+ '&CPHONE=' +tel+ '&CTEXT=' +text];
-            console.log(fields)
+            //console.log(fields)
 
         $.ajax({
             url: '/ajax/send_request.php'+fields,
@@ -494,8 +494,8 @@ $(document).ready(function() {
                 $('.modal_result_text').html(data.mesText);
                 $('#show_modal').trigger('click');
             }, 500);
-            console.log(data);
-            console.log(data.code);
+            //console.log(data);
+            //console.log(data.code);
         });
         e.preventDefault();
         // return false;
@@ -521,7 +521,7 @@ var isMobile = null;
     };
     isMobile.iOS = function () {
         return !!(navigator.userAgent.match(/iPhone|iPad|iPod/i));
-        console.log('iOS');
+        //console.log('iOS');
     };
     isMobile.Opera = function () {
         return !!(navigator.userAgent.match(/Opera Mini/i));
