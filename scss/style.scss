@@ -891,6 +891,7 @@ input[type=checkbox]:disabled:indeterminate:before {
 		width: 4%;
 		min-width: 45px;
 		float: left;
+		margin-top: 0.5%;
 	}
 	.container_center {
 
@@ -901,7 +902,7 @@ input[type=checkbox]:disabled:indeterminate:before {
 		}
 	}
 	.toggle_menu {
-		margin-top: 0.8%;
+		margin-top: 1.4%;
 		font-size: 18px;
 		color: #808080;
 	}
@@ -919,7 +920,7 @@ input[type=checkbox]:disabled:indeterminate:before {
 	.navbar {
 		&_wrapp {}
 		&_logo {
-			margin-top: 0.8%;
+			margin-top: 0.5%;
 		}
 		&__item {}
 		&__link {

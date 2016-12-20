@@ -799,16 +799,16 @@
 							<!-- Start form_contact_form -->
 							<form class="form" id="contact_form" action="/">
 								<div class="form__row">
-									<input class="form__field" type="text" placeholder="Имя" required />
+									<input class="form__field" type="text" name="CNAME" placeholder="Имя" required />
 								</div>
 								<div class="form__row">
-									<input class="form__field tel_mask" type="text" placeholder="Телефон" required />
+									<input class="form__field tel_mask" type="text" name="CPHONE" placeholder="Телефон" required />
 								</div>
 								<div class="form__row">
-									<input class="form__field" type="text" placeholder="E-mail" />
+									<input class="form__field" type="text" name="CEMAIL" placeholder="E-mail" />
 								</div>
 								<div class="form__row">
-									<textarea class="form__field" placeholder="Комментарии"></textarea>
+									<textarea class="form__field" name="CTEXT" placeholder="Комментарии"></textarea>
 								</div>
 								<div class="form__row">
 									<button type="submit" class="btn btn_many_shadow">Оставить сообщение</button>
@@ -850,15 +850,15 @@
 				<div class="modal-body">
 					<div class="modal-title">Оставьте контактные данные, я свяжусь с Вами в ближайшее время</div>
 					<!-- Start form_contact_form -->
-					<form class="form contact_form" id="contact_form_modal" action="/">
+					<form class="form contact_form" id="contact_form_modal">
 						<div class="form__row">
-							<input class="form__input" type="text" placeholder="Имя" required />
+							<input class="form__input" type="text" name="CNAME" placeholder="Имя" required />
 						</div>
 						<div class="form__row errore">
-							<input class="form__input tel_mask" type="text" placeholder="Поле обязательно для заполнения" required />
+							<input class="form__input tel_mask" type="text" name="CPHONE" placeholder="Поле обязательно для заполнения" required />
 						</div>
 						<div class="form__row">
-							<input class="form__input" type="text" placeholder="E-mail" />
+							<input class="form__input" type="text" name="CEMAIL" placeholder="E-mail" />
 						</div>
 						<div class="form__row">
 							<button type="submit" class="btn btn_many_shadow">Отправить</button>
@@ -899,8 +899,8 @@
 			<div class="modal-content">
 				<a href="#" class="modal-close" data-dismiss="modal"></a>
 				<div class="modal-body">
-					<div class="modal_result_title">Сообщение принято!</div>
-					<div>Я свяжусь с вами в ближайшнн время!</div>
+					<div class="modal_result_title"></div>
+					<div class="modal_result_text"></div>
 				</div>
 			</div>
 		</div>

@@ -469,6 +469,38 @@ $(document).ready(function() {
 
     });
 
+
+    // Form success submitt
+    $('form').submit(function(e) {
+        var form = $(this);
+            name = $('[name=CNAME]').val();
+            email = $('[name=CEMAIL]').val();
+            tel = $('[name=CPHONE]').val();
+            text = $('[name=CTEXT]').val();
+            fields = ['?CNAME='+name+ '&CEMAIL=' +email+ '&CPHONE=' +tel+ '&CTEXT=' +text];
+            console.log(fields)
+
+        $.ajax({
+            url: '/ajax/send_request.php'+fields,
+            type: 'POST',
+            dataType: 'json',
+            // data: data,
+            // return false;
+        })
+        .always(function(data) {
+            form.closest('.modal-content').find('.modal-close').trigger('click');
+            setTimeout(function() {
+                $('.modal_result_title').html(data.mesTitle);
+                $('.modal_result_text').html(data.mesText);
+                $('#show_modal').trigger('click');
+            }, 500);
+            console.log(data);
+            console.log(data.code);
+        });
+        e.preventDefault();
+        // return false;
+    });
+
 });
 
 
